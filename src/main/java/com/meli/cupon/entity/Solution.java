@@ -17,32 +17,29 @@ public class Solution {
 	
 	// Items que se comprarán 
 	private List<Item> items;
-	// Valor maximo
-	private int value;
+
+	private float costValue;
+	private List<String> theItemsSolution;
 	
-	public Solution(List<Item> items, int value) {
+	public Solution(List<Item> items) {
 		this.items = items;
-		this.value = value;
+		generateSolution();
 	}
 	
-	public void display() {
-		if (items != null  &&  !items.isEmpty()){		
-			for (int i = items.size()-1; i >= 0; i--) {
-				System.out.println(items.get(i).getId());
-			}
-		}
-	}
-	
-	public List<String> getSolution(){
+	private void generateSolution(){
 		List<String> theSolution = new ArrayList<>();
+		float totalValue= 0l;
 		if (items != null  &&  !items.isEmpty()){		
 			for (int i = items.size()-1; i >= 0; i--) {
 				theSolution.add(items.get(i).getId());
+				totalValue += items.get(i).getCost();
 			}
 		}
-		return theSolution;
+		
+		theItemsSolution = theSolution;
+		costValue = totalValue;
 	}
-
+		
 	public List<Item> getItems() {
 		return items;
 	}
@@ -51,12 +48,20 @@ public class Solution {
 		this.items = items;
 	}
 
-	public int getValue() {
-		return value;
+	public float getCostValue() {
+		return costValue;
 	}
 
-	public void setValue(int value) {
-		this.value = value;
+	public void setCostValue(float costValue) {
+		this.costValue = costValue;
+	}
+
+	public List<String> getTheItemsSolution() {
+		return theItemsSolution;
+	}
+
+	public void setTheItemsSolution(List<String> theItemsSolution) {
+		this.theItemsSolution = theItemsSolution;
 	}
 	
 	
