@@ -27,7 +27,7 @@ public class CuponController {
 	
 	@GetMapping
 	ResponseEntity<String> hello() {
-		return ResponseEntity.ok("hellow Wolrd");
+		return ResponseEntity.ok("Hola, Actualmente solo funciono como POST :) ");
 	}
 	
 	@PostMapping
