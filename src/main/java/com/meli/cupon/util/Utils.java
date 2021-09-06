@@ -1,11 +1,14 @@
 package com.meli.cupon.util;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import com.meli.cupon.entity.Solution;
 import com.meli.cupon.entity.Item;
+import com.meli.cupon.entity.PetitionItem;
+import com.meli.cupon.entity.Response;
 /**
  * 
  * @author juan Cruz 
@@ -111,6 +114,20 @@ public class Utils {
 		items.forEach((k,v) -> result.add(new Item(k, v.intValue(), v)));
 		
 		return result;
+	}
+	
+	public static List<Item> toItems(PetitionItem[] items) {
+		List<Item> result = new ArrayList<>();
+		
+		for (int i = 0; i < items.length; i++) {
+			result.add(new Item(items[i].getId(), i+1, items[i].getAmount()));
+		}
+		
+		return result;
+	}
+	
+	public static Response toResponse(Solution solution) {
+		return new Response(solution.getTheItemsSolution(),solution.getCostValue());
 	}
 	
 	private static int toKnapsackAmount(Float amount) {
