@@ -52,13 +52,14 @@ y si se construye correctamente, puede correrlo con este comando
 java -jar build/libs/cupon-0.0.1-SNAPSHOT.jar
 ```
 
-Nota: este solo ejecutará el microservicio Springboot.
-estos comandos son enfocados en el uso del wraaper que viene en el proyecto, si desea hacerlo con el gradle de su compudator puede remplazar `./gradlew` con solo el uso del comando `gradle`
+**Nota:** este solo ejecutará el microservicio Springboot.
+
+Estos comandos son enfocados en el uso del wraaper que viene en el proyecto, si desea hacerlo con el gradle de su computador puede remplazar `./gradlew` con solo el uso del comando `gradle`
 
 
 ## Como funciona
 
-Dentro de este aplicativo se encotnrarán las dos funcionalidades de la prueba, funcionando para ejecutarlas se deben seguir los pasos que se mencionan a continuación
+Dentro de este aplicativo se encontrarán las dos funcionalidades de la prueba, funcionando para ejecutarlas se deben seguir los pasos que se mencionan a continuación
 
 ### Nivel 1
 para el nivel 1 donde se solicita una aplicación java que contenga un funcionamiento lógico con un método que se exprese de la siguiente manera:
