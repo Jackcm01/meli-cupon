@@ -25,7 +25,7 @@ mis condiciones técnicas en el lenguaje Java 1.8, Springboot.
 ### Clone
 para iniciar se puede clonar el proyecto en:
 ```
-git clone <<pendinente>>
+git clone https://github.com/Jackcm01/meli-cupon
 cd cupon
 ```
 
