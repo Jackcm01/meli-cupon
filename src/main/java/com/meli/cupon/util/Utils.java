@@ -3,7 +3,6 @@ package com.meli.cupon.util;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import com.meli.cupon.entity.Solution;
 import com.meli.cupon.entity.Item;
